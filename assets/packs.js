@@ -8,6 +8,7 @@ window.PACKS = [
     page: "packs/mirror-selfie-system.html",
     gumroad: "https://ayoubharraby.gumroad.com/l/a001"
   }
+  ,
   {
     slug: "christmas-photographs-system",
     title: "Identity-Locked Christmas Photographs System",
