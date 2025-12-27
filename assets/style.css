@@ -155,36 +155,32 @@ h2{margin:0; font-size:22px; letter-spacing:-.2px}
   h1{font-size:36px}
   .brand__sub{display:none}
 }
-/* Add to assets/style.css */
 
-/* Image Card Styles for Prompt Shop */
+/* NEW: Styles for the Prompt Shop Image Cards */
 .pack--image {
-  padding: 0; /* Remove padding so image touches edges */
-  overflow: hidden; /* Clip the image to rounded corners */
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
   color: var(--text);
 }
-
 .pack__media {
   width: 100%;
-  aspect-ratio: 4/3; /* Adjust ratio as needed (1/1 for square) */
+  aspect-ratio: 4/3;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
-
 .pack__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .pack__body {
   padding: 16px;
   flex-grow: 1;
   display: flex;
-  align-items: center; /* Vertically center the title */
+  align-items: center;
 }
