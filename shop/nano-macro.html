@@ -28,25 +28,99 @@
     <div class="wrap" style="max-width: 800px;">
       
       <h1 style="font-size: 32px; margin-bottom: 20px;">Nano Banana Pro Macro Photography Prompts</h1>
-      
-      <div class="panel panel--plain">
-        <p style="white-space: pre-wrap; color: var(--muted); font-family: monospace;">
-Subject: Extreme macro shot of a butterfly wing scale.
-Lighting: Iridescent natural light, soft diffusion.
-Details: 8k resolution, electron microscope style, visible texture grains.
---no blur, depth of field
-        </p>
+      <p class="sub" style="margin-bottom: 40px;">
+        47 prompts optimized for extreme texture and lighting realism.
+        Click "Copy" to grab the prompt without numbering.
+      </p>
+
+      <!-- PROMPTS CONTAINER -->
+      <div id="prompt-container">
+        <!-- 47 Blocks injected below -->
       </div>
 
-      <div class="panel panel--plain">
-        <p style="white-space: pre-wrap; color: var(--muted); font-family: monospace;">
-Subject: Water droplet on a peacock feather.
-Lighting: High contrast studio ring light.
-Details: Refraction inside the droplet, sharp focus on the feather barbs.
-        </p>
-      </div>
-
-      </div>
+    </div>
   </main>
+
+  <script>
+    // The prompts array
+    const prompts = [
+      "Macro photograph of a ripe banana peel bruised from being carried in a backpack, broad pressure-darkened areas and stretched skin fibers visible, dirt smudges embedded in the surface, soft indoor daylight revealing curvature, shallow but readable depth of field preserving the banana’s overall form.",
+      "Macro photograph of a ladybug climbing across a dusty window ledge, glossy red shell dulled by fine grit, chipped paint flakes surrounding the insect, late-afternoon sunlight casting long micro-shadows, depth of field wide enough to show context and movement.",
+      "Macro photograph of a honeybee struggling through sticky tree sap, legs partially trapped, pollen smeared unevenly across the body, translucent amber sap catching sunlight, shallow depth of field emphasizing tension and motion rather than texture alone.",
+      "Macro photograph of human fingertips stained with blueberry juice, pigment absorbed into skin creases, faint wrinkles and fingerprints visible, soft kitchen lighting, shallow depth of field focused on the color-soaked contact zones.",
+      "Macro photograph of chocolate left in a warm car, slumped and misshapen inside its wrapper, glossy melt patterns and fingerprints pressed into the surface, ambient daylight filtering through glass, tactile realism.",
+      "Macro photograph of a bitten apple left on a desk, oxidizing flesh darkening unevenly, tooth impressions clearly visible, moisture beads forming, window light creating soft shadows, quiet still-life realism.",
+      "Macro photograph of a human eye seen through fogged glass, condensation droplets distorting the iris beneath, eyelashes blurred into abstraction, shallow depth of field prioritizing atmosphere over precision.",
+      "Macro photograph of cracked sidewalk asphalt after rain, weeds emerging through a seam, wet aggregate stones catching reflections, muted overcast light, depth of field preserving spatial relationships.",
+      "Macro photograph of an old leather wallet opened on a table, creases permanently set, corners worn thin, loose threads visible, warm lamplight emphasizing age and use.",
+      "Macro photograph of freshly torn bread being pulled apart, gluten strands stretching and snapping, crumbs suspended mid-fall, warm kitchen light freezing a moment of motion.",
+      "Macro photograph of a dragonfly wing torn near the edge, veins abruptly ending at a jagged tear, insect resting on a railing, background dissolving into soft color, documentary realism.",
+      "Macro photograph of a sweaty human hand gripping a gym bar, chalk residue mixing with moisture, compressed skin folds visible, harsh overhead light, shallow depth of field focused on tension.",
+      "Macro photograph of an orange peel twisted open by hand, thick rind bending and cracking, pith stretching into threads, citrus oil mist catching light.",
+      "Macro photograph of sun-baked clay soil splitting open, large plates lifting at edges, ants moving through the cracks, low-angle sunlight exaggerating relief.",
+      "Macro photograph of a candle wick bent and blackened after use, wax pooled asymmetrically around it, faint smoke residue visible, dim ambient lighting.",
+      "Macro photograph of lips pressed against a cold glass, flattened shape and moisture marks left behind, soft reflections and shallow depth of field.",
+      "Macro photograph of moss growing inside a cracked brick wall, vibrant green against red clay, water droplets trapped in miniature valleys, soft shade lighting.",
+      "Macro photograph of a coffee mug rim stained by years of use, layered rings overlapping, small chips in the glaze, morning light hitting from the side.",
+      "Macro photograph of paint peeling from an old wooden door, curled flakes revealing older colors beneath, nail heads rusting, directional sunlight.",
+      "Macro photograph of a bare foot stepping into shallow seawater, sand shifting and bubbles forming around toes, sunlight refracting through ripples.",
+      "Macro photograph of a leaf chewed by caterpillars, asymmetrical holes disrupting the silhouette, veins exposed and curling, backlit by daylight.",
+      "Macro photograph of a smartphone screen covered in fingerprints, overlapping swirls catching side light, hairline scratches visible, dark background.",
+      "Macro photograph of a grilled cheese sandwich being pulled apart, melted cheese stretching into strands, toasted bread texture contrasting softness.",
+      "Macro photograph of a wristwatch strap worn smooth at the buckle hole, skin indentation marks visible beneath, soft natural light.",
+      "Macro photograph of stacked coins knocked over, rolling across a table, motion blur on edges, shallow depth of field emphasizing chaos.",
+      "Macro photograph of ice cubes melting on a wooden countertop, water pooling along grain lines, trapped air bubbles releasing.",
+      "Macro photograph of a single bird feather caught in a chain-link fence, frayed edges fluttering, urban background softly blurred.",
+      "Macro photograph of a street poster torn by wind, paper layers flapping outward, glue residue and dirt visible, harsh sunlight.",
+      "Macro photograph of a laborer’s palm after work, grime embedded in creases, small cuts and healed scars visible, neutral daylight.",
+      "Macro photograph of a banana being peeled hurriedly, uneven tear lines, fibers snapping irregularly, motion frozen mid-action.",
+      "Macro photograph of rain droplets racing down a car window, streaking reflections of streetlights, depth of field focused on water movement.",
+      "Macro photograph of cracked ice on a puddle, shoe tread imprint visible beneath, overcast winter light.",
+      "Macro photograph of a paperback book corner bent backward repeatedly, spine fibers breaking through, soft indoor lighting.",
+      "Macro photograph of a shoulder under a damp T-shirt, fabric clinging to skin, sweat darkening the cloth, shallow depth of field.",
+      "Macro photograph of bark peeling from a fallen tree, insects visible beneath, rough textures contrasting smooth exposed wood.",
+      "Macro photograph of a spoon resting in thick soup, residue clinging unevenly, steam softening the background.",
+      "Macro photograph of oil stains spreading across concrete, irregular shapes merging, streetlight reflections glowing.",
+      "Macro photograph of a chipped ceramic mug handle, fracture lines spreading but intact, warm kitchen light.",
+      "Macro photograph of handwritten notes with crossed-out words, ink pressure variations visible, desk lamp illumination.",
+      "Macro photograph of a damp towel slumped over a chair, heavy folds stretching fibers, moisture darkening fabric.",
+      "Macro photograph of an apple slice left out overnight, edges curling, browning spreading from the core outward.",
+      "Macro photograph of a weed breaking through sidewalk concrete, stem bent under pressure, symbol of persistence.",
+      "Macro photograph of a paintbrush discarded after use, bristles splayed and stiff with drying paint.",
+      "Macro photograph of the back of a human neck at rest, subtle folds and shadow gradients, intimate framing.",
+      "Macro photograph of a wooden table edge carved by years of contact, dents and stains accumulated.",
+      "Macro photograph of water spilled across a desk, liquid creeping toward papers, reflections distorting wood grain.",
+      "Macro photograph of a closed book with frayed cloth cover, softened corners and exposed stitching."
+    ];
+
+    const container = document.getElementById('prompt-container');
+
+    prompts.forEach(text => {
+      const panel = document.createElement('div');
+      panel.className = 'panel panel--plain';
+      
+      const p = document.createElement('p');
+      p.style.whiteSpace = 'pre-wrap';
+      p.style.color = 'var(--muted)';
+      p.style.fontFamily = 'monospace';
+      p.style.margin = '0';
+      p.textContent = text;
+
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copy';
+      btn.onclick = () => {
+        navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+      };
+
+      panel.appendChild(btn);
+      panel.appendChild(p);
+      container.appendChild(panel);
+    });
+  </script>
 </body>
 </html>
+
+
