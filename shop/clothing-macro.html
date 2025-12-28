@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hyper-Realistic Clothing Macro — ayoubharraby</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="bg__glow bg__glow--c"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__dot"></span>
+        <span class="brand__name">ayoubharraby</span>
+      </a>
+      <nav class="nav">
+        <a href="../prompt-shop.html">← Back to Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap" style="max-width: 800px;">
+      
+      <h1 style="font-size: 32px; margin-bottom: 20px;">Hyper‑Realistic AI Clothing Macro Photography</h1>
+      <p class="sub" style="margin-bottom: 40px;">
+        50 prompts focusing on the "conveniences" of fashion: tags, hardware, footwear details, and material textures.
+        Optimized for NanoBanana Pro.
+      </p>
+
+      <!-- PROMPTS CONTAINER -->
+      <div id="prompt-container">
+        <!-- Prompts injected via JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const prompts = [
+      "Macro photograph of a thick leather patch stitched onto the waistband of raw denim jeans, deep debossed lettering pressed into the rich brown grain, heavy orange topstitching framing the edges, indigo dye transferring slightly onto the leather borders.",
+      "Macro photograph of a black woven satin neck label inside a wool coat, silver embroidery thread catching the light, individual loops of the stitched typography clearly visible, sharp focus on the label texture against the soft blurred background.",
+      "Macro photograph of a vintage white size tag on an old cotton t-shirt, black screen-printed text cracking and peeling to reveal the fabric fibers beneath, soft pilling surrounding the tag, authentic signs of age and wear.",
+      "Macro photograph of a translucent silk care label, fine black typography showing washing instructions, the cut edge of the ribbon fraying into microscopic loose threads, soft backlighting revealing the sheer weave structure.",
+      "Macro photograph of a matte rubberized logo tab sewn into the seam of a technical waterproof jacket, synthetic silicone texture contrasting with the ripstop nylon fabric, tiny water droplets resting on the surface, cool outdoor lighting.",
+      "Macro photograph of a heavy brass zipper pull resting against black leather, metal showing signs of oxidation and scratches, the YKK stamp faintly visible, interlocking zipper teeth falling out of focus in the background.",
+      "Macro photograph of a tortoiseshell button on a tweed blazer, light refracting through the semi-transparent resin patterns, four distinct thread holes filled with crossed stitching, fuzzy wool fibers framing the button.",
+      "Macro photograph of the selvedge ID line on a pair of cuffed jeans, red and white woven edge distinct against the dark indigo denim, chain stitch hem unraveling slightly, dust particles embedded in the fabric weave.",
+      "Macro photograph of a metal rivet reinforcing a jeans pocket, copper patina developing on the surface, the fabric puckering around the stress point, directional light highlighting the concentric circles on the rivet head.",
+      "Macro photograph of a plastic aglet at the end of a hoodie drawstring, clear plastic crimped over the braided cotton cord, fraying threads emerging from the tip, soft jersey fabric in the background.",
+      "Macro photograph of a sneaker shoelace passing through a metal eyelet, flat cotton weave of the lace slightly twisted, painted white metal of the eyelet chipping to reveal brass underneath, canvas texture visible surrounding the hole.",
+      "Macro photograph of the Goodyear welt stitching on a leather boot, heavy waxed thread connecting the leather upper to the sole, dust settled in the crevices, rich full-grain leather texture with pores visible.",
+      "Macro photograph of the tongue label on a retro sneaker, woven nylon fabric with embroidered sizing numbers, foam padding exposed at the raw edge of the tongue, soft studio lighting.",
+      "Macro photograph of a velcro strap on a shoe being pulled open, plastic hooks stretching and engaging with the fuzzy loop side, dust and lint trapped in the mechanism, sharp focus on the tension point.",
+      "Macro photograph of the air bubble unit in a sneaker sole, transparent urethane catching the light, internal support structures visible within the cushion, scuffs on the exterior surface indicating wear.",
+      "Macro photograph of a corduroy shirt collar, distinctive 'wale' ridges running vertically, velvet-like texture of the cotton pile, a single loose thread interrupting the pattern, warm ambient light.",
+      "Macro photograph of a mother-of-pearl snap button on a western shirt, iridescent layers of pink and green reflecting light, silver metal rim framing the stone, denim fabric background.",
+      "Macro photograph of the knit cuff of a wool sweater, ribbing pattern stretching slightly, fuzzy halo of loose wool fibers backlit by the sun, intricate yarn twist visible.",
+      "Macro photograph of a waterproof seam tape inside a rain jacket, clear adhesive bonding the tape to the fabric, faint grid pattern of the membrane visible underneath, technical and sterile aesthetic.",
+      "Macro photograph of an embroidered logo on a baseball cap, raised satin stitching giving a 3D effect, individual thread direction changing to catch light differently, cotton twill fabric texture underneath.",
+      "Macro photograph of a distressed hem on denim shorts, white warp threads hanging loose and frayed, blue weft threads holding the structure together, chaotic texture against a smooth background.",
+      "Macro photograph of a silk tie knot, jacquard weave pattern creating subtle ridges, light sheen on the curve of the fabric, microscopic dust mote resting on the surface.",
+      "Macro photograph of a metal belt buckle prong resting on worn leather, scratches on the metal surface, indentation mark on the leather strap where the buckle usually sits, rich patina.",
+      "Macro photograph of the stitching on a leather watch strap, waxed linen thread pulling tight into the leather hide, pores and natural wrinkles of the skin visible, macro focus.",
+      "Macro photograph of a chunky plastic zipper tooth track on a fleece jacket, teeth interlocking perfectly, fleece fibers caught slightly in the mechanism, vibrant color contrast.",
+      "Macro photograph of a printed size information inside a performance t-shirt, heat-transfer vinyl stretching with the fabric, slight cracking in the letters, moisture-wicking mesh texture background.",
+      "Macro photograph of the heel tab of a suede boot, nap of the suede brushed in different directions, heavy stitching reinforcing the loop, soft and tactile appearance.",
+      "Macro photograph of a metal lace hook on a hiking boot, paint worn off the high points of the metal, round braided lace hooked around it, mud speckles adding realism.",
+      "Macro photograph of the penny slot on a leather loafer, edge of the leather cut cleanly but showing raw fibers, polished surface shining, deep burgundy color tones.",
+      "Macro photograph of the insole of a well-worn sneaker, printed logo worn away at the heel, fabric pilling and compression marks from the foot, realistic wear details.",
+      "Macro photograph of a swimsuit fabric texture, tight spandex knit stretching, chlorine resistant sheen, bright vibrant pattern warped by the stretch.",
+      "Macro photograph of a decorative tassel on a loafer, strips of leather cut uniformly, edges showing the tan interior of the hide, resting against the shoe vamp.",
+      "Macro photograph of a canvas tote bag handle, heavy canvas weave texture, reinforced box-x stitching in thick thread, stress lines in the fabric.",
+      "Macro photograph of a vintage metal zipper stop at the bottom of a jacket, brass metal darkened with age, fabric tape fraying slightly near the insertion pin.",
+      "Macro photograph of a chenille patch on a varsity jacket, fuzzy loop texture standing high off the surface, felt backing visible at the edges, contrasting colors.",
+      "Macro photograph of a nylon webbing strap on a backpack, herringbone weave pattern of the synthetic material, plastic buckle partially visible in the frame, utility aesthetic.",
+      "Macro photograph of a shirt pocket corner, triangular reinforcement stitching, pattern matching of the plaid fabric slightly imperfect, soft cotton flannel texture.",
+      "Macro photograph of a raw hem on a silk dress, delicate threads unraveling, sheer fabric layering over itself, soft and dreamy lighting.",
+      "Macro photograph of a magnetic snap closure on a purse, two metal discs connecting, leather surrounding the magnet puckering slightly, indentation marks.",
+      "Macro photograph of the mesh upper of a running shoe, dual-layer mesh with different colors, breathable holes creating depth, synthetic overlay bonding.",
+      "Macro photograph of a wool beanie knit pattern, cable knit structure interlocking, fuzziness of the yarn softening the edges, warm winter lighting.",
+      "Macro photograph of a metal grommet on a hoodie, drawstring exiting the hole, metal rim stamped with branding text, jersey fabric bunching around the hardware.",
+      "Macro photograph of a leather glove finger, grain of the leather stretching around the curve, intricate stitching at the fingertip, soft sheen.",
+      "Macro photograph of a scarf fringe, individual yarn strands twisted together, ends frayed and fluffy, wool texture highly detailed.",
+      "Macro photograph of a snapback cap plastic adjustment strap, holes and pegs visible, plastic texture matte with gloss edges, mesh cap background.",
+      "Macro photograph of a linen blazer fabric, 'slubs' or irregularities in the thread thickness visible, open weave structure, natural beige tone.",
+      "Macro photograph of a high heel tip, smooth patent leather meeting the rubber heel cap, reflection on the glossy surface, sharp geometric lines.",
+      "Macro photograph of flatlock stitching on yoga pants, complex thread looping pattern lying flat against the fabric, stretch marks in the material, performance fabric sheen.",
+      "Macro photograph of a brand tag sewn onto a sleeve cuff, small rectangular woven label, distinct stitching on all four sides, fabric bunching slightly under the tag.",
+      "Macro photograph of a zipper garage on a technical jacket, fabric fold covering the top of the zipper, zipper pull tucked away, waterproof coating visible."
+    ];
+
+    const container = document.getElementById('prompt-container');
+
+    prompts.forEach(text => {
+      const panel = document.createElement('div');
+      panel.className = 'panel panel--plain';
+      
+      const p = document.createElement('p');
+      p.style.whiteSpace = 'pre-wrap';
+      p.style.color = 'var(--muted)';
+      p.style.fontFamily = 'monospace';
+      p.style.margin = '0';
+      p.textContent = text;
+
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copy';
+      btn.onclick = () => {
+        navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+      };
+
+      panel.appendChild(btn);
+      panel.appendChild(p);
+      container.appendChild(panel);
+    });
+  </script>
+</body>
+</html>
+
+
