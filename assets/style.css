@@ -98,7 +98,7 @@ h1{font-size:46px; line-height:1.07; margin:14px 0 12px; letter-spacing:-.8px;}
 .signal__value{color:var(--text); font-size:13px}
 .panel{border-radius: var(--radius); border:1px solid var(--line); padding:16px; box-shadow: var(--shadow2);}
 .panel--glass{background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02));}
-.panel--plain{margin-top:14px; background: rgba(255,255,255,.03);}
+.panel--plain{margin-top:14px; background: rgba(255,255,255,.03); position: relative;}
 .panel__cap{color:var(--muted2); font-size:13px}
 .panel__title{font-size:18px; font-weight:780; margin:8px 0 8px; letter-spacing:-.2px}
 .panel__desc{color:var(--muted); margin-bottom:12px}
@@ -156,7 +156,7 @@ h2{margin:0; font-size:22px; letter-spacing:-.2px}
   .brand__sub{display:none}
 }
 
-/* NEW: Styles for the Prompt Shop Image Cards */
+/* Image Card Styles for Prompt Shop */
 .pack--image {
   padding: 0;
   overflow: hidden;
@@ -166,21 +166,43 @@ h2{margin:0; font-size:22px; letter-spacing:-.2px}
   text-decoration: none;
   color: var(--text);
 }
+
 .pack__media {
   width: 100%;
   aspect-ratio: 4/3;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
+
 .pack__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .pack__body {
   padding: 16px;
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
+
+/* Copy Button for Prompt Panels */
+.copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,.1);
+  color: #fff;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.copy-btn:hover { background: rgba(255,255,255,.1); }
+.copy-btn:active { transform: scale(0.95); }
+
+
