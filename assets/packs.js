@@ -4,7 +4,7 @@ window.PACKS = [
     title: "Aesthetic States: Universal Product System",
     badge: "New • Paid",
     desc: "One prompt, any product. A master system for neutral, high-fidelity advertisement imagery.",
-    tags: ["Universal", "Product Photo", "Neutral Precision"],
+    tags: ["Universal", "Product Photo"],
     page: "packs/aesthetic-states-system.html",
     gumroad: "https://ayoubharraby.gumroad.com/l/aesthetic-states"
   },
